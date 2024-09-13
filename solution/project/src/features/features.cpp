@@ -156,6 +156,8 @@ MAKE_HOOK(
 		CTFPlayer_ForceRespawn.call<void>(rcx);
 
 		*reinterpret_cast<bool *>(reinterpret_cast<uintptr_t>(rcx) + 9923ull) = false;
+
+		return;
 	}
 
 	CALL_ORIGINAL(rcx, info);

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\app\app.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hde\hde32.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hde\hde64.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\buffer.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hook.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\trampoline.cpp" />
+    <ClCompile Include="src\shared\utils\mem_utils.cpp" />
+    <ClCompile Include="src\shared\utils\mem_addr.cpp" />
+    <ClCompile Include="src\features\features.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\app\app.hpp" />
+    <ClInclude Include="src\shared\shared.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\include\minhook.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\hde32.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\hde64.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\table32.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\table64.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\buffer.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\trampoline.hpp" />
+    <ClInclude Include="src\shared\utils\hash_fnv1a32.hpp" />
+    <ClInclude Include="src\shared\utils\inst_tracker.hpp" />
+    <ClInclude Include="src\shared\utils\mem_utils.hpp" />
+    <ClInclude Include="src\shared\utils\mem_addr.hpp" />
+    <ClInclude Include="src\sdk\sdk.hpp" />
+    <ClInclude Include="src\sdk\tracked\make_hook.hpp" />
+    <ClInclude Include="src\game\game.hpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d4328061-b962-48e2-94bd-7747f7cf39e8}</ProjectGuid>
+    <RootNamespace>project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <OutDir>$(SolutionDir)output\bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)output\build\$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>jb64</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\app\app.cpp" />
+    <ClCompile Include="src\features\features.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\buffer.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hde\hde32.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hde\hde64.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\hook.cpp" />
+    <ClCompile Include="src\shared\libs\minhook\src\trampoline.cpp" />
+    <ClCompile Include="src\shared\utils\mem_utils.cpp" />
+    <ClCompile Include="src\shared\utils\mem_addr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\app\app.hpp" />
+    <ClInclude Include="src\game\game.hpp" />
+    <ClInclude Include="src\sdk\sdk.hpp" />
+    <ClInclude Include="src\sdk\tracked\make_hook.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\include\minhook.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\buffer.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\hde32.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\hde64.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\table32.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\hde\table64.hpp" />
+    <ClInclude Include="src\shared\libs\minhook\src\trampoline.hpp" />
+    <ClInclude Include="src\shared\shared.hpp" />
+    <ClInclude Include="src\shared\utils\hash_fnv1a32.hpp" />
+    <ClInclude Include="src\shared\utils\inst_tracker.hpp" />
+    <ClInclude Include="src\shared\utils\mem_utils.hpp" />
+    <ClInclude Include="src\shared\utils\mem_addr.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

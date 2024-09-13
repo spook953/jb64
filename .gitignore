@@ -1,0 +1,4 @@
+
+*.vsidx
+/solution/.vs
+/solution/output

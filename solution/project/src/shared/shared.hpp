@@ -9,3 +9,4 @@
 
 #include <format>
 #include <functional>
+#include <intrin.h>
